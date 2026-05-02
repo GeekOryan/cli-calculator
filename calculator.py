@@ -1,0 +1,104 @@
+'''
+1. Program starts and displays a welcome message showing available operators: + - * / % ** sqrt
+2. User is prompted to enter the first number
+3. If the user types "exit" at any input stage, the program closes cleanly with a goodbye message
+4. If the input is not a valid number, flag the error and ask again: do not proceed
+5. User is prompted to enter an operator
+6. If the operator is not one of the 7 allowed ones, flag the error and ask again
+7. If the operator is sqrt, skip to Step 10 immediately
+8. User is prompted to enter the second number
+9. If the input is not a valid number, flag the error and ask again
+10. If the operator is / or % and the second number is 0, flag a division by zero error and ask for the second number again
+11. Program performs the calculation
+12. Result is displayed in the format: firstNumber operator secondNumber = result
+13. For sqrt the format is: √firstNumber = result
+14. User is prompted: type new to calculate again or exit to quit
+15. If new: return to Step 2 cleanly
+16. If exit: close the program with a goodbye message
+17. If anything else: flag it and show the prompt again
+'''
+'''
+def welcomeToProgram():
+    
+    while True:
+        
+        welcome = input("Type 'op' to view menu or (Type 'exit' to exit the program): ")
+        
+        if welcome.lower() == "exit":
+            print("Goodbye")
+            break
+        
+        print("=============================")
+        print("WELCOME TO THE CLI CALCULATOR")
+        print("=============================")
+        
+        print("THE OPERATORS THAT CAN BE USED (+ - * / % ** sqrt) ")
+    
+
+def getUserInput():
+    number1 = int(input("Enter the first number: "))
+    if number1 > 0:
+        print(f"Valid number entered: {number1}")
+    else:
+        print("Invalid number entered. Try again.")
+    
+welcomeToProgram()
+# getUserInput()
+
+'''
+
+'''
+
+CALCULATOR BOILERPLATE:
+
+[TOP] 
+- Define helper functions (add, sub, etc.)
+
+[MIDDLE] 
+- Create a main "run" function
+    - Start 'while' loop
+        - Get user input
+        - Validate input (check for exit command)
+        - Try:
+            - Call logic functions
+            - Display result
+        - Except:
+            - Show error message
+            - Loop continues
+
+[BOTTOM]
+- Call the main "run" function
+'''
+
+def addition(num1, num2):
+    return num1 + num2
+
+def subtraction(num1, num2):
+    return num1 - num2
+
+def multiplication(num1, num2):
+    return num1 * num2
+
+def division(num1, num2):
+    if num2 == 0:
+        return "Error: Division by Zero"
+    else:
+        num1 / num2
+        
+
+def runCalculator():
+    print("=============================")
+    print("WELCOME TO THE CLI CALCULATOR")
+    print("=============================")
+        
+    print("THE OPERATORS THAT CAN BE USED (+ - * / % ** sqrt) ")
+
+
+while True:
+    print("Select an operator to continue / type 'exit' to exit the program")
+    
+
+
+
+# runCalculator()
+
