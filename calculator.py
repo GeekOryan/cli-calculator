@@ -69,6 +69,8 @@ CALCULATOR BOILERPLATE:
 [BOTTOM]
 - Call the main "run" function
 '''
+import math
+
 
 def addition(num1, num2):
     return num1 + num2
@@ -96,7 +98,19 @@ def runCalculator():
 
 while True:
     print("Select an operator to continue / type 'exit' to exit the program")
+    choice = input("Enter the operator you wish to use or exit to leave the program: ").lower()
     
+    if choice == "exit":
+        print("Good...Bye")
+        break
+    
+    if choice in ('+', '-', '*', '/', '**', '%', 'sqrt'):
+        try:
+            # This is where the user input will be received
+            num1 = float(input("Enter the first number: "))
+            num2 = float(input("Enter the second number: "))
+        except ValueError:
+            print("Invalid Number inserted. Enter a valid number to continue.")
 
 
 
