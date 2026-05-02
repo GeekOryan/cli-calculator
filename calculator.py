@@ -109,6 +109,16 @@ while True:
             # This is where the user input will be received
             num1 = float(input("Enter the first number: "))
             num2 = float(input("Enter the second number: "))
+            
+            # This is where the if statements will be placed based on the choice of operator the user wishes to utilize
+            if choice == "+":
+                print(f"The result of  {num1} + {num2}: {addition(num1, num2)}")
+            elif choice == "-":
+                print(f"The result of  {num1} - {num2}: {subtraction(num1, num2)}")
+            elif choice == "*":
+                print(f"The result of  {num1} * {num2}: {multiplication(num1, num2)}")
+            elif choice == "/":
+                print(f"The result of  {num1} / {num2}: {division(num1, num2)}")
         except ValueError:
             print("Invalid Number inserted. Enter a valid number to continue.")
 
