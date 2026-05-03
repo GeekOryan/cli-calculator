@@ -21,18 +21,18 @@ A Total of 7 operators can be used in this CLI Calculator:
 ## How to Run
 ** Requirements:** Python 3 Installed on your machine.
 
-**Step 1** : Clone your repositor:
-'''bash git clone https://github.com/GeekOryan/cli-calculator.git'''
+**Step 1** : Clone your repository:
+bash git clone https://github.com/GeekOryan/cli-calculator.git
 
 **Step 2**: Navigate into the folder:
-'''bash
+bash
 cd cli-calculator
-'''
+
 
 **Step 3**: ![alt text](image.png)Run the program:
-'''bash
+bash
 python calculator.py
-'''
+
 
 
 ## Screenshot
