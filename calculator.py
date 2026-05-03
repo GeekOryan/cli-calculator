@@ -85,7 +85,16 @@ def division(num1, num2):
     if num2 == 0:
         return "Error: Division by Zero"
     else:
-        num1 / num2
+        return num1 / num2
+    
+def power(num1, num2):
+    return pow(num1, num2)
+
+def modulus(num1, num2):
+    return num1 % num2
+
+def sqrt(num1):
+    return math.sqrt(num1)
         
 
 def runCalculator():
@@ -94,35 +103,49 @@ def runCalculator():
     print("=============================")
         
     print("THE OPERATORS THAT CAN BE USED (+ - * / % ** sqrt) ")
-
-
-while True:
-    print("Select an operator to continue / type 'exit' to exit the program")
-    choice = input("Enter the operator you wish to use or exit to leave the program: ").lower()
     
-    if choice == "exit":
-        print("Good...Bye")
-        break
-    
-    if choice in ('+', '-', '*', '/', '**', '%', 'sqrt'):
-        try:
-            # This is where the user input will be received
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
+    while True:
+        print("Select an operator to continue / type 'exit' to exit the program")
+        choice = input("Enter the operator you wish to use or exit to leave the program: ").lower()
+        
+        if choice == "exit":
+            print("Good...Bye")
+            break
+        
+        #if choice in ('+', '-', '*', '/', '**', '%', 'sqrt'):
+        if choice == "sqrt":
             
-            # This is where the if statements will be placed based on the choice of operator the user wishes to utilize
-            if choice == "+":
-                print(f"The result of  {num1} + {num2}: {addition(num1, num2)}")
-            elif choice == "-":
-                print(f"The result of  {num1} - {num2}: {subtraction(num1, num2)}")
-            elif choice == "*":
-                print(f"The result of  {num1} * {num2}: {multiplication(num1, num2)}")
-            elif choice == "/":
-                print(f"The result of  {num1} / {num2}: {division(num1, num2)}")
-        except ValueError:
-            print("Invalid Number inserted. Enter a valid number to continue.")
+            
+            try:
+                # This is where the user input will be received
+                num1 = float(input("Enter the first number: "))
+                math.sqrt(num1)
+                print(math.sqrt(num1))
+            except ValueError:
+                print("Invalid Number inserted. Enter a valid number to continue.")
+                
+        else:
+            
+            try:
+                
+                num1 = float(input("Enter the first number: "))
+                num2 = float(input("Enter the second number: "))
+                # This is where the if statements will be placed based on the choice of operator the user wishes to utilize
+                if choice == "+":
+                    print(f"The result of  {num1} + {num2}: {addition(num1, num2)}")
+                elif choice == "-":
+                    print(f"The result of  {num1} - {num2}: {subtraction(num1, num2)}")
+                elif choice == "*":
+                    print(f"The result of  {num1} * {num2}: {multiplication(num1, num2)}")
+                elif choice == "/":
+                    print(f"The result of  {num1} / {num2}: {division(num1, num2)}")
+                elif choice == "**":
+                    print(f"The result of the power of {num1}: {power(num1, num2)}")
+                elif choice == "%":
+                    print(f"The result of modulus {num1}: {modulus(num1, num2)}")
+            except ValueError:
+                print("Invalid Number inserted. Enter a valid number to continue.")
 
 
-
-# runCalculator()
+runCalculator()
 
